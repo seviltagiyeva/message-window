@@ -1,0 +1,42 @@
+%column
+  display: flex
+  flex-direction: column
+  
+%row
+  display: flex
+  flex-direction: row
+@keyframes color
+  from
+    background-color: #e9f2fa
+  to
+    background-color: #f0ecf0
+
+.form__messages
+  @extend %column
+  padding: 0 30px
+  overflow: auto
+  .form__message
+    @extend %row
+    background-color: #ffffff
+    font-family: Arial
+    margin: 8px 0
+    padding: 6px 15px
+    border-radius: 3px
+    &.form__message_own
+      background-color: #f0ecf0
+      animation-name: color
+      animation-duration: 2s
+    .form__message__img
+      display: flex
+      flex-basis: 8.4%
+      img 
+        width: 30px
+        height: 30px
+        margin: auto
+    .form__message__text
+      flex-basis: 78%
+      color: #3e3e3e
+      font-size: 14px
+    .form__message__time
+      color: #7f7f7f
+      font-size: 12px
